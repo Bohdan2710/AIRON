@@ -3,12 +3,14 @@ body {
   line-height: 1.5;
   font-family: $montserrat-regular;
   color: $grey-color;
+  background-color: $white-color;
 
   &.hidden{
     overflow: hidden;
   }
 }
 .wrapper {
+  position: relative;
   overflow: hidden;
 }
 .container {

@@ -1,26 +1,27 @@
 .header {
-  padding: 1.5rem 0;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 99;
+  padding: .8rem 0;
+  border-bottom: .1rem solid $white-color;
   @include _1024 {
-    padding: 3rem 0 2rem;
+    padding: 1rem 0;
   }
   &__logo {
-    flex: 0 0 auto;
-    max-width: 9.1rem;
-    height: 1.8rem;
+    width: 5.2rem;
+    height: 5.5rem;
     display: block;
-    position: relative;
-    z-index: 100;
-
-    @include _768 {
-      margin: 0 2rem 0 0;
+    margin: 0 2rem 0 0;
+    @include _1024{
+      flex: 0 0 auto;
+      width: 5.7rem;
+      height: 6rem;
+      margin: 0 5rem 0 0;
     }
-
-    @include _1024 {
-      max-width: 14.6rem;
-      height: 3rem;
-    }
-    @include _1440 {
-      margin: 0 14rem 0 0;
+    @include _1440{
+      margin: 0 11rem 0 0;
     }
   }
 
@@ -28,53 +29,97 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    @include _1440{
+      justify-content: flex-start;
+    }
   }
 
-  &__mob {
-    width: 100%;
-    max-width: 14.5rem;
-    display: flex;
-    align-items: center;
-    position: relative;
-    z-index: 100;
-    @include _1024 {
-      display: none;
+  &__contact{
+    display: none;
+    @include _1024{
+      display: block;
+    }
+    nav{
+      ul{
+        padding: 0;
+        margin: 0;
+        display: flex;
+        align-items: center;
+        li{
+          margin: 0 1rem 0 0;
+          &:last-child{
+            margin: 0;
+          }
+          a{
+            img{
+              width: 2rem;
+              height: 2rem;
+            }
+          }
+        }
+      }
     }
   }
 
   &__nav_list_desk,
   &__nav_list_mob {
-    padding: 12.1rem 0 4rem;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: white;
-    z-index: 99;
-    @include _1024 {
-      display: none;
-    }
     ul {
       padding: 0;
       margin: 0;
-      flex: 1 1 auto;
       li {
         margin: 0 0 4rem;
         text-align: center;
         &:last-child {
           margin: 0;
-          font-family: $roboto-medium;
+          // font-family: $roboto-medium;
         }
         a {
           text-decoration: none;
           font-size: 1.6rem;
           line-height: 1.87rem;
-          color: $main-color;
+          // color: $main-color;
+        }
+      }
+    }
+  }
+  &__nav_list_mob{
+    background-color: #FAFAFA;
+    display: flex;
+    position: fixed;
+    align-items: stretch;
+    justify-content: flex-start;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 99;
+    @include _1024 {
+      display: none;
+    }
+
+    ul{
+      overflow: auto;
+      padding: 2.7rem 0 2.8rem;
+      flex: 1 1 auto;
+      li{
+        margin: 0 0 1.5rem;
+        &:last-child{
+          margin: 0;
+        }
+        a{
+          color: $grey-color;
+          font-family: $montserrat-medium;
+          font-size: 1.8rem;
+          line-height: 2.2rem;
+          &:hover{
+            font-family: $montserrat-bold;
+            border-bottom: .2rem solid;
+          }
         }
       }
     }
@@ -83,61 +128,118 @@
     display: none;
     position: static;
     padding: 0;
+    margin: 0 2rem 0 0;
+    @include _1440{
+      margin: 0 10.6rem 0 0;
+    }
     ul {
       display: flex;
       align-items: center;
       flex-wrap: wrap;
       row-gap: 2rem;
       li {
-        margin: 0 2rem 0 0;
-        &:last-child {
-          font-family: $roboto-regular;
+        margin: 0 2.5rem 0 0;
+        &:last-child{
+          margin: 0;
         }
-        @include _1024 {
-          margin: 0 4rem 0 0;
+        a{
+          color: $white-color;
+          font-size: 1.8rem;
+          line-height: 2.2rem;
+          &:hover{
+            padding: 0 0 2.7rem;
+            border-bottom: 2px solid;
+          }
         }
       }
     }
 
     @include _1024 {
-      width: 60%;
       display: block;
-    }
-  }
-
-  &__contact {
-    display: none;
-    margin: 0 2rem 0 0;
-    a {
-      display: block;
-      flex: 0 0 auto;
-      color: $main-color;
-      font-family: $roboto-medium;
-      text-decoration: none;
-      margin: 0 2rem 0 0;
-      font-size: 1.6rem;
-      line-height: 1.8rem;
-      @include _1024 {
-        margin: 0 4rem 0 0;
-      }
-    }
-    @include _1024 {
-      width: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: flex-end;
-      margin: 0 4rem 0 0;
     }
   }
 }
-
+.nav_list_mob{
+  &__head{
+    border-bottom: .1rem solid $grey-color;
+    width: 100%;
+    padding: 1rem 0;
+    .dropdown-toggle{
+      display: flex;
+      align-items: center;
+      img{
+        width: 2rem;
+        height: 2rem;
+        margin: 0 .4rem 0 0;
+        &.arrow_lang{
+          width: 1.2rem;
+          height: .6rem;
+          position: relative;
+          top: .3rem;
+        }
+      }
+      &::after{
+        display: none;
+      }
+    }
+    .dropdown-menu{
+      padding: 2rem 1.5rem;
+    }
+    .btn-secondary{
+      background-color: transparent;
+      border: none;
+      padding: 0;
+    }
+  }
+  &__footer{
+    border-top: .1rem solid $grey-color;
+    padding: 1.5rem 0 2.4rem;
+    ul{
+      padding: 0;
+      margin: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      li{
+        margin: 0 1.5rem 0 0;
+        &:last-child{
+          margin: 0;
+        }
+        a{
+          display: block;
+          width: 3rem;
+          height: 3rem;
+        }
+      }
+    }
+  }
+}
+.head{
+  &__container{
+    padding: 0 2rem 0 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__logo_mob{
+    position: relative;
+    left: -1rem;
+    width: 5rem;
+    height: 5rem;
+  }
+}
 .menu {
   &__btn {
     &_open {
+      @include _1024{
+        display: none;
+      }
     }
 
     &_close {
       display: none;
+      width: 3rem;
+      height: 3rem;
     }
   }
 }

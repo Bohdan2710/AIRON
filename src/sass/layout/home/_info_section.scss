@@ -1,0 +1,144 @@
+.info {
+  position: relative;
+  overflow: hidden;
+  padding: 6rem 0 0;
+  @include _1024{
+    padding: 12rem 0 0;
+  }
+
+  &__container{
+    position: relative;
+    padding: 0 3.5rem 36.4rem;
+    @include _1024{
+      padding: 0 10rem 38.3rem;
+    }
+  }
+
+  &__head {
+    margin: 0 0 3rem;
+    @include _1024{
+      margin: 0 0 5rem;
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
+  &__title {
+    text-transform: uppercase;
+    font-size: 2.5rem;
+    line-height: 3rem;
+
+    @include _1024{
+      font-size: 3.5rem;
+      line-height: 4.2rem;
+      max-width: 96.1rem;
+      margin: 0 3rem 0 0;
+    }
+
+    span{
+      color: $green-color;
+    }
+  }
+
+  &__icon {
+    display: none;
+    @include _1024{
+      flex: 0 0 auto;
+      display: block;
+      width: 3.5rem;
+      height: 3.5rem;
+    }
+  }
+
+  &__blocks {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    @include _968{
+      flex-wrap: nowrap;
+    }
+  }
+
+  &__block {
+    background-color: $white-color;
+    border: 1px solid rgba(239, 239, 239, 1);
+    text-align: center;
+    padding: 2.3rem 1.5rem 2rem;
+    width: calc(calc(100% - 2rem)/2);
+    max-width: 45rem;
+    &:last-child{
+      max-width: 100%;
+      width: 100%;
+      @include _968{
+        max-width: 24.6rem;
+      }
+    }
+    @include _968{
+      width: 100%;
+    }
+    @include _1024{
+      border-radius: .5rem;
+      padding: 2rem;
+    }
+  }
+
+  &__back {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: -1;
+
+    .desk {
+      display: none;
+      @include _600{
+        display: block;
+      }
+    }
+    .mob {
+      display: block;
+      @include _600{
+        display: none;
+      }
+    }
+  }
+}
+.blocks_info {
+
+  &__total {
+    display: block;
+    font-size: 4rem;
+    line-height: 4rem;
+    margin: 0 0 1.2rem;
+    color: $green-color;
+    @include _1024{
+      font-family: $montserrat-light;
+    }
+    &::after{
+      content: '';
+      display: block;
+      width: 7rem;
+      height: .1rem;
+      background-color: $grey-color;
+      margin: 1.1rem auto 0;
+    }
+
+
+    &.last{
+      &::after{
+        width: 14rem;
+      }
+    }
+   
+  }
+
+  &__text {
+    display: block;
+    font-size: 1.4rem;
+    line-height: 1.5rem;
+    @include _1024{
+      line-height: 1.7rem;
+    }
+  }
+}
+

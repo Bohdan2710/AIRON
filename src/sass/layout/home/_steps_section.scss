@@ -1,0 +1,141 @@
+.steps {
+  padding: 7rem 0 5rem;
+  @include _1024{
+    padding: 10rem 0 8.5rem;
+  }
+
+  &__title {
+    flex: 0 0 auto;
+    font-size: 3rem;
+    line-height: 3.6rem;
+    text-transform: uppercase;
+    margin: 0 0 3rem;
+    padding: 0 0 .5rem;
+    border-bottom: .1rem solid $grey-color;
+    span{
+      display: inline-block;
+      margin: 0 1.1rem 0 0;
+      &.green{
+        color: $green-color;
+      }
+    }
+    span{
+      flex: 0 0 auto;
+    }
+    @include _768{
+      margin: 0 0 8.8rem;
+    }
+    @include _1024{
+      display: flex;
+      align-items: center;
+      font-size: 3.5rem;
+      line-height: 4.2rem;
+      border: none;
+      padding: 0;
+      &::after{
+        content: '';
+        display: block;
+        width: 100%;
+        height: .1rem;
+        background-color: $grey-color;
+      }
+    }
+  }
+
+  &__button{
+    margin: 0 auto 0;
+    max-width: 32rem;
+    @include _768{
+      margin: 4rem auto 0;
+      max-width: 30rem;
+    }
+  }
+
+  &__blocks {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    row-gap: 3rem;
+    @include _768{
+      row-gap: 8rem;
+    }
+    @include _1280{
+      row-gap: 9.6rem;
+    }
+  }
+}
+.block_steps {
+  background: rgba(255, 255, 255, 1);
+  position: relative;
+  &:last-child{
+    margin: 0 0 2rem;
+    @include _768{
+      margin: 0;
+    }
+  }
+  @include _768{
+    border: 1px solid rgba(239, 239, 239, 1);
+    width: calc(calc(100% - 2rem)/2);
+  }
+  @include _1280{
+    width: calc(calc(100% - 4rem)/3);
+    max-width: 41rem;
+  }
+}
+.block_stesps {
+
+  &__img {
+    @include _768{
+      width: 100%;
+      max-width: 20rem;
+      position: absolute;
+      left: 3rem;
+      top: -5.5rem;
+
+      img{
+        max-height: 13rem;
+      }
+    }
+  }
+
+  &__bottom {
+    padding: 2rem 1rem 2rem 2rem;
+    display: flex;
+    border-bottom: 1px solid rgba(239, 239, 239, 1);
+    border-left: 1px solid rgba(239, 239, 239, 1);
+    border-right: 1px solid rgba(239, 239, 239, 1);
+    @include _768{
+      flex-direction: column-reverse;
+      border: none;
+      padding: 3rem 3rem 1.2rem 3rem;
+    }
+  }
+
+  &__text {
+    font-size: 1.6rem;
+    line-height: 1.9rem;
+    margin: 0 .4rem 0 0;
+    @include _768{
+      font-size: 1.8rem;
+      line-height: 2.2rem;
+    }
+  }
+
+  &__count {
+    display: block;
+    color: $green-color;
+    font-family: $montserrat-light;
+    font-size: 3rem;
+    line-height: 3rem;
+    @include _768{
+      width: 100%;
+      border-bottom: .1rem solid rgba(239, 239, 239, 1);
+      font-size: 4rem;
+      line-height: 4rem;
+      padding: 0 0 2.7rem;
+      margin: 0 0 2rem;
+      text-align: right;
+    }
+
+  }
+}
