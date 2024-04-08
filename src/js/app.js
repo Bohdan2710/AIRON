@@ -57,29 +57,29 @@ $(document).ready(function () {
   // });
 
   //menu
-  // $(".header__nav_list_mob").hide();
+  $(".header__nav_list_mob").hide();
 
-  // $(".menu__btn_open").on("click", function () {
-  //   $("body").addClass("hidden");
-  //   $(".header__nav_list_mob").show();
-  //   $(this).hide();
-  //   $(".menu__btn_close").show();
-  // });
+  $(".menu__btn_open").on("click", function () {
+    $("body").addClass("hidden");
+    $(".header__nav_list_mob").show();
+    $(this).hide();
+    $(".menu__btn_close").show();
+  });
 
-  // $(".menu__btn_close").on("click", function () {
-  //   $("body").removeClass("hidden");
-  //   $(".header__nav_list_mob").hide();
-  //   $(this).hide();
-  //   $(".menu__btn_open").show();
-  // });
+  $(".menu__btn_close").on("click", function () {
+    $("body").removeClass("hidden");
+    $(".header__nav_list_mob").hide();
+    $(this).hide();
+    $(".menu__btn_open").show();
+  });
 
   //modal-form
-  // $(".popup_form").hide();
+  $(".popup_form").hide();
   // $(".contact__button, .header__button_mob").on("click", function () {
   //   $(".popup_form").show();
   // });
 
-  // $(".popup_form__close").on("click", function () {
-  //   $(".popup_form").hide();
-  // });
+  $(".popup_form__close").on("click", function () {
+    $(".popup_form").hide();
+  });
 });
