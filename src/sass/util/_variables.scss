@@ -1,0 +1,29 @@
+@import './fonts';
+
+//Media
+$pc-med:    1440px;
+$pc:        1280px;
+$lg-tab:    1024px;
+$tab:       968px;
+$sm-tab:    768px;
+$lg-mob:    600px;
+$mob:       480px;
+$sm-mob:    375px;
+
+//Color
+$grey-color:  rgba(79, 79, 79, 1);
+$gray-orange-color: rgba(232, 121, 104, 1);
+$orange-color: rgba(255, 83, 33, 1);
+$green-color: rgba(0, 151, 160, 1);
+$white-color: rgba(250, 250, 250, 1);
+$hover-video-button: rgba(254, 50, 39, 1);
+
+
+//Fonts 
+$montserrat-light: 'Montserrat-Light', serif;
+$montserrat-regular: 'Montserrat-Regular', serif;
+$montserrat-medium: 'Montserrat-Medium', serif;
+$montserrat-bold: 'Montserrat-Bold', serif;
+$montserrat-semibold: 'Montserrat-SemiBold', serif;
+$montserrat-extrabold: 'Montserrat-ExtraBold', serif;
+$montserrat-black: 'Montserrat-Black', serif;

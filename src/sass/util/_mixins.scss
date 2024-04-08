@@ -1,0 +1,42 @@
+@import './variables';
+
+@mixin _1440{
+  @media (min-width: $pc-med){
+      @content;
+  }
+}
+@mixin _1280{
+  @media (min-width: $pc){
+      @content;
+  }
+}
+@mixin _1024{
+  @media (min-width: $lg-tab){
+      @content;
+  }
+}
+@mixin _968{
+  @media (min-width: $tab){
+      @content;
+  }
+}
+@mixin _768{
+  @media (min-width: $sm-tab){
+      @content;
+  }
+}
+@mixin _600{
+  @media (min-width: $lg-mob){
+      @content;
+  }
+}
+@mixin _480{
+  @media (min-width: $mob){
+      @content;
+  }
+}
+@mixin _375{
+  @media (min-width: $sm-mob){
+      @content;
+  }
+}

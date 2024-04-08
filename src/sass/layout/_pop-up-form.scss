@@ -1,0 +1,114 @@
+.popup_form {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+}
+
+.popup_form {
+  &__close {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    width: 100%;
+    max-width: 1.5rem;
+    height: 1.5rem;
+    display: block;
+    @include _1024 {
+      top: 3rem;
+      right: 3rem;
+    }
+  }
+  &__wrap {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 0.5rem;
+    width: 100%;
+    max-width: 48.2rem;
+    padding: 1.5rem;
+    text-align: center;
+    @include _1024 {
+      padding: 6rem;
+      height: auto;
+      margin-top: 0;
+    }
+  }
+
+  &__title {
+    font-size: 2.4rem;
+    margin: 0 0 1.5rem;
+    line-height: 1.8rem;
+    font-family: $roboto-medium;
+    @include _1024 {
+      font-size: 4rem;
+      line-height: 5.2rem;
+      margin: 0 0 2rem;
+    }
+  }
+
+  input {
+    border: 1px solid rgba(51, 51, 51, 1);
+    width: 100%;
+    display: block;
+    background-color: transparent;
+    margin: 0 0 1rem;
+    border-radius: 0.5rem;
+    padding: 0.9rem 1.5rem;
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+    @include _1024 {
+      font-size: 1.6rem;
+      line-height: 2.4rem;
+      margin: 0 0 1.5rem;
+    }
+
+    &.error {
+      background: rgba(255, 204, 204, 0.2);
+      border: 1px solid rgba(255, 0, 0, 1);
+      color: rgba(255, 0, 0, 1);
+      &::placeholder{
+        color: rgba(255, 0, 0, 1);
+      }
+    }
+  }
+
+  &__sub-title {
+    font-size: 1.3rem;
+    line-height: 1.9rem;
+    margin: 0 0 2.5rem;
+    @include _1024 {
+      font-size: 1.6rem;
+      line-height: 2.4rem;
+      margin: 0 0 4rem;
+    }
+  }
+
+  &__submit {
+    max-width: 100%;
+    margin: 1rem 0;
+    @include _1024 {
+      margin: 1.5rem 0;
+    }
+  }
+}
+
+.form-control.is-invalid,
+.was-validated .form-control:invalid {
+  background-image: url("");
+  &::placeholder {
+    color: rgba(255, 0, 0, 1);
+  }
+  border: 1px solid rgba(255, 0, 0, 1);
+  background-color: rgba(255, 204, 204, 0.2);
+}
+.form-control.is-valid,
+.was-validated .form-control:valid {
+  background-image: url("");
+}

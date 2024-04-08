@@ -1,0 +1,143 @@
+.header {
+  padding: 1.5rem 0;
+  @include _1024 {
+    padding: 3rem 0 2rem;
+  }
+  &__logo {
+    flex: 0 0 auto;
+    max-width: 9.1rem;
+    height: 1.8rem;
+    display: block;
+    position: relative;
+    z-index: 100;
+
+    @include _768 {
+      margin: 0 2rem 0 0;
+    }
+
+    @include _1024 {
+      max-width: 14.6rem;
+      height: 3rem;
+    }
+    @include _1440 {
+      margin: 0 14rem 0 0;
+    }
+  }
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__mob {
+    width: 100%;
+    max-width: 14.5rem;
+    display: flex;
+    align-items: center;
+    position: relative;
+    z-index: 100;
+    @include _1024 {
+      display: none;
+    }
+  }
+
+  &__nav_list_desk,
+  &__nav_list_mob {
+    padding: 12.1rem 0 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    z-index: 99;
+    @include _1024 {
+      display: none;
+    }
+    ul {
+      padding: 0;
+      margin: 0;
+      flex: 1 1 auto;
+      li {
+        margin: 0 0 4rem;
+        text-align: center;
+        &:last-child {
+          margin: 0;
+          font-family: $roboto-medium;
+        }
+        a {
+          text-decoration: none;
+          font-size: 1.6rem;
+          line-height: 1.87rem;
+          color: $main-color;
+        }
+      }
+    }
+  }
+  &__nav_list_desk {
+    display: none;
+    position: static;
+    padding: 0;
+    ul {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      row-gap: 2rem;
+      li {
+        margin: 0 2rem 0 0;
+        &:last-child {
+          font-family: $roboto-regular;
+        }
+        @include _1024 {
+          margin: 0 4rem 0 0;
+        }
+      }
+    }
+
+    @include _1024 {
+      width: 60%;
+      display: block;
+    }
+  }
+
+  &__contact {
+    display: none;
+    margin: 0 2rem 0 0;
+    a {
+      display: block;
+      flex: 0 0 auto;
+      color: $main-color;
+      font-family: $roboto-medium;
+      text-decoration: none;
+      margin: 0 2rem 0 0;
+      font-size: 1.6rem;
+      line-height: 1.8rem;
+      @include _1024 {
+        margin: 0 4rem 0 0;
+      }
+    }
+    @include _1024 {
+      width: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      margin: 0 4rem 0 0;
+    }
+  }
+}
+
+.menu {
+  &__btn {
+    &_open {
+    }
+
+    &_close {
+      display: none;
+    }
+  }
+}
