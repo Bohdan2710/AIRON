@@ -1,0 +1,145 @@
+.form {
+  padding: 5rem 0;
+  @include _1024{
+    padding: 8.75rem 0 9rem;
+  }
+  &__back{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+  }
+
+  &__wrap {
+    padding: 2rem 2rem 25.3rem 2rem;
+    position: relative;
+    @include _600{
+      padding: 2rem 2rem 3.3rem 2rem;
+    }
+    @include _768{
+      display: flex;
+      justify-content: space-between;
+    }
+    @include _1024{
+      padding: 3.6rem 6rem 6rem 6rem;
+    }
+  }
+
+  &__title {
+    margin: 0 0 2.1rem;
+    border: none;
+    padding: 0;
+    display: block;
+    &::after{
+      display: none;
+    }
+    span{
+      margin: 1rem 0 0;
+      &.green{
+        display: block;
+        @include _1024{
+          text-transform: none;
+          margin: 1.4rem 0 4rem;
+          font-family: $montserrat-bold;
+          font-size: 2rem;
+          line-height: 2.4rem;
+        }
+      }
+    }
+  }
+  form{
+    @include _768{
+      width: 50%;
+      margin: 0 2rem 0 0;
+      max-width: 45rem;
+    }
+  }
+  &__span{
+    font-size: 1.6rem;
+    line-height: 2.2rem;
+    text-transform: uppercase;
+    margin: 0 0 2rem;
+    display: inline-block;
+    color: $white-color;
+    @include _1024{
+      font-size: 2rem;
+      font-family: $montserrat-bold;
+      margin: 0 0 3rem;
+      line-height: 2.4rem;
+      text-transform: none;
+      width: 110%;
+    }
+  }
+  input {
+    border-top: 0;
+    border-right: 0;
+    border-left: 0;
+    width: 100%;
+    display: block;
+    background-color: $white-color;
+    margin: 0 0 1rem;
+    padding: 1.4rem 1.5rem;
+    font-size: 1.4rem;
+    line-height: 1.7rem;
+    font-family: $montserrat-regular;
+    color: $form-color-grey;
+
+    @include _1024 {
+      font-size: 1.6rem;
+      line-height: 2.4rem;
+      margin: 0 0 1.5rem;
+    }
+
+    &.error {
+      background: rgba(255, 204, 204, 0.2);
+      border: 1px solid rgba(255, 0, 0, 1);
+      color: rgba(255, 0, 0, 1);
+      &::placeholder {
+        color: rgba(255, 0, 0, 1);
+      }
+    }
+  }
+
+  &__submit{
+    max-width: 100%;
+    @include _600{
+      margin: 0 0 2rem;
+    }
+    @include _1024{
+      margin: 0;
+    }
+  }
+
+  &__img {
+    position: absolute;
+    bottom: 3.3rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 110%;
+    img{
+      max-height: 20rem;
+      @include _600{
+        max-height: 100%;
+      }
+    }
+    @include _600{
+      transform: translateX(0);
+      position: static;
+      width: 100%;
+    }
+    @include _768{
+      width: 50%;
+    }
+    @include _1280{
+      max-width: 60rem;
+      position: absolute;
+      bottom: 6rem;
+      right: 6rem;
+      img{
+        max-height: 35rem;
+      }
+    }
+  }
+}

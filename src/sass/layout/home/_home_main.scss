@@ -1,10 +1,10 @@
 .main {
+  position: relative;
   @include _1024{
     background: transparent !important;
   }
 
   &__container{
-    position: relative;
     padding: 13.7rem 3.5rem 6.7rem;
     @include _1024{
       padding: 25.1rem 10rem 18.5rem;

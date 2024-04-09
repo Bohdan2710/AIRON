@@ -1,0 +1,99 @@
+.story{
+  padding: 5rem 0;
+  @include _1024{
+    padding: 9rem 0 8.8rem;
+  }
+  &__title{
+    border: none;
+    padding: 0;
+    margin: 0 0 3rem;
+    @include _1024{
+      margin: 0 3rem 0 0;
+    }
+    &::after{
+      display: none;
+    }
+  }
+  &__block{
+    &_img {
+      position: relative;
+      margin: 0 0 1rem;
+    }
+    &_button{
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    &_info {
+      display: inline-block;
+      font-size: 1.8rem;
+      line-height: 2.1rem;
+    }
+  }
+  
+  &__wrap{
+    @include _1024{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin: 0 0 4rem;
+    }
+  }
+
+  .swiper-pagination{
+    position: static;
+  }
+  .swiper-pagination-bullet{
+    background: rgba(79, 79, 79, 1);
+    opacity: 1;
+    width: 1rem;
+    height: 1rem;
+    position: relative;
+    margin: 0 1rem 0 0;
+  }
+  .swiper-pagination-bullet-active{
+    background: rgba(79, 79, 79, 1);
+    &::after{
+      content: '';
+      width: 1.5rem;
+      height: 1.5rem;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      border: 1px solid rgba(79, 79, 79, 1);
+      border-radius: 50%;
+    }
+  }
+  &__buttons{
+    .swiper-button-prev,
+    .swiper-button-next{
+      flex: 0 0 auto;
+      &.mob{
+        @include _1024{
+          display: none;
+        }
+      }
+    }
+  }
+  &__buttons_desk{
+    display: none;
+    @include _1024{
+      display: flex;
+
+      .swiper-button-prev{
+        margin: 0 1rem 0 0;
+      }
+    }
+  }
+
+  .swiper-slide{
+    height: fit-content;
+    margin: 0 0 2rem;
+    @include _1024{
+      margin: 0 0 3rem;
+    }
+  }
+}

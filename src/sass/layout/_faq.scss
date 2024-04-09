@@ -1,0 +1,110 @@
+.faq{
+  padding: 5rem 0 10rem;
+  @include _1024{
+    padding: 5.7rem 0 14.3rem;
+  }
+  &__wrap{
+    @include _968{
+      display: flex;
+    }
+  }
+  &__title{
+    margin: 0 0 3rem;
+    @include _1024{
+      margin: 0 0 2.7rem;
+    }
+    br{
+      @include _768{
+        display: none;
+      }
+    }
+    span{
+      display: block;
+      @include _768{
+        margin: 0 2rem 0 0;
+      }
+    }
+  }
+  &__img{
+    @include _968{
+      width: 50%;
+    }
+
+    img{
+      &.desk{
+        display: none;
+        @include _1024{
+          display: block;
+        }
+      }
+      &.mob{
+        display: block;
+        @include _1024{
+          display: none;
+        }
+      }
+    }
+  }
+  &__accordion{
+    margin: 0 0 3rem;
+    @include _968{
+      width: 50%;
+      margin: 0 4rem 0 0;
+    }
+    @include _1024{
+      margin: 0 8rem 0 0;
+    }
+  }
+
+}
+
+.accordion-item{
+  margin: 0 0 1rem;
+  &:last-child{
+    margin: 0;
+  }
+}
+
+.accordion-button{
+  padding: 1rem 1.5rem 1rem 2rem;
+  font-size: 1.6rem;
+  line-height: 1.95rem;
+  font-family: $montserrat-medium;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid rgba(236, 236, 236, 1);
+  @include _1024{
+    padding: 1.4rem 2rem;
+    font-size: 1.8rem;
+    line-height: 2.2rem;
+    font-family: $montserrat-regular;
+  }
+  
+  img{
+    transform: rotate(0deg);
+    transition: .3s transform;
+    width: 2.5rem;
+    height: 1rem;
+    margin: 0 0 0 3.4rem;
+  }
+}
+.accordion-button:not(.collapsed){
+  color: $grey-color;
+  box-shadow: none;
+
+  img{
+    transform: rotate(-180deg);
+  }
+}
+.accordion-button:not(.collapsed)::after,
+.accordion-button::after{
+  display: none;
+}
+
+.accordion-body{
+  padding: 1.5rem;
+  font-size: 1.6rem;
+  line-height: 1.95rem;
+  font-family: $montserrat-medium;
+}

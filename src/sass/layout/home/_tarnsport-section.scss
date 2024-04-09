@@ -1,0 +1,161 @@
+.transport {
+  padding: 5rem 0;
+  @include _1024{
+    padding: 9rem 0 8.7rem;
+  }
+
+  &__wrap{
+    position: relative;
+  }
+
+  &_swiper {
+    margin: 0 0 3rem;
+    @include _600{
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 45%;
+    }
+    @include _1024{
+      height: 100%;
+    }
+  }
+  &__head{
+    margin: 0;
+  }
+
+  &__title{
+    font-size: 3rem;
+    padding: 0 0 .8rem;
+    line-height: 3.6rem;
+    margin: 0 0 2.7rem;
+    border-bottom: .1rem solid $grey-color;
+
+    @include _1024{
+      font-size: 3.5rem;
+      line-height: 4.2rem;
+      margin: 0 0 4rem;
+      border: none;
+      padding: 0;
+    }
+  }
+
+  &__wrap_tabs {
+    @include _600{
+      width: 50%;
+      margin-left: auto;
+    }
+  }
+
+  &__blocks {
+    @include _968{
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 1rem;
+      @include _1024{
+        gap: 2rem;
+      }
+      @include _1280{
+        row-gap: 7.5rem;
+      }
+    }
+  }
+
+  &__block {
+    margin: 0 0 2rem;
+    @include _968{
+      width: calc(calc(100% - 1rem)/2);
+      margin: 0;
+    }
+    @include _1024{
+      width: calc(calc(100% - 2rem)/2);
+    }
+    @include _1440{
+      width: calc(calc(100% - 6.5rem)/2);
+      &:nth-child(2){
+        padding: 0 2rem 0 0;
+      }
+      &:nth-child(3){
+        padding: 0 6.7rem 0 0;
+      }
+    }
+    &:last-child{
+      margin: 0;
+    }
+  }
+  &__buttons{
+    left: inherit;
+    right: 0;
+    justify-content: flex-end;
+  }
+
+  .swiper-slide {
+    max-height: 38rem;
+    height: 38rem;
+    @include _1024{
+      max-height: 100%;
+      height: 100%;
+    }
+  }
+}
+.block {
+
+  &__title {
+    padding: 0;
+    border: 0;
+    font-size: 1.8rem;
+    font-family: $montserrat-bold;
+    line-height: 2.1rem;
+    margin: 0 0 1rem;
+    @include _1024{
+      font-size: 2rem;
+      line-height: 2.4rem;
+    }
+    &::after{
+      display: none;
+    }
+  }
+
+  &__text {
+    font-size: 1.4rem;
+    line-height: 1.7rem;
+  }
+}
+
+
+.nav-pills{
+  margin: 0 0 2.8rem !important;
+  flex-wrap: nowrap;
+  border-bottom: .1rem solid $grey-color;
+  font-size: 2rem;
+  line-height: 2.4rem;
+  justify-content: space-between;
+  @include _1024{
+    font-family: $montserrat-bold;
+    margin: 0 0 7.1rem !important;
+  }
+}
+.nav-item{
+  width: 50%;
+}
+.nav-pills .nav-link{
+  padding: 0 0 1rem;
+  border-radius: 0;
+  height: 100%;
+  color: $grey-color;
+  width: 100%;
+  &.first{
+    text-align: left;
+    padding: 0 2rem 1rem 0;
+  }
+  &.last{
+    text-align: right;
+  }
+}
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link{
+  background-color: transparent;
+  color: $green-color;
+  border-bottom: .3rem solid $grey-color;
+  height: 100%;
+}
