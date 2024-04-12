@@ -1,4 +1,5 @@
 $(document).ready(function () {
+  //back header
   $(window).scroll(function () {
     if ($(this).scrollTop() > 100) {
       $(".header").addClass("back");
@@ -6,6 +7,14 @@ $(document).ready(function () {
       $(".header").removeClass("back");
     }
   });
+
+  //detect mob
+  if (window.matchMedia('(min-width: 1024px)').matches) {
+    $('.story__buttons_mob').remove();
+  } else {
+    $('.story__buttons_desk').remove();
+  }
+  
   //mask
   // var phoneInput = document.getElementById("popup_form__phone");
   // var form = document.getElementById("form");
@@ -96,7 +105,7 @@ $(document).ready(function () {
     }
   });
 
-  var swiper3 = new Swiper('.previous_voyages_swiper', {
+  const swiper3 = new Swiper('.previous_voyages_swiper', {
     loop: true,
     speed: 1000,
     autoplay: {
@@ -122,7 +131,6 @@ $(document).ready(function () {
     },
   })
 
-
   const swipre4 = new Swiper(".transport_swiper", {
     slidesPerView: 1,
     spaceBetween: 10,
@@ -139,7 +147,31 @@ $(document).ready(function () {
     }
   });
 
-  var swiperSoon = new Swiper(".soon__swiper", {
+  const swiperRout = new Swiper(".route__swiper", {
+    spaceBetween: 10,
+    slidesPerView: 1,
+    loop: true,
+    speed: 1000,
+    autoplay: {
+        delay: 3000,
+    },
+    watchSlidesProgress: true,
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    breakpoints: {
+      640: {
+        slidesPerView: 2,
+        spaceBetween: 20,
+      },
+      1024: {
+        slidesPerView: 2.3,
+        spaceBetween: 40,
+      },
+    },
+  });
+  const swiperSoon = new Swiper(".soon__swiper", {
     spaceBetween: 10,
     slidesPerView: 1,
     freeMode: true,
@@ -167,7 +199,7 @@ $(document).ready(function () {
       },
     },
   });
-  var swiperSoon2 = new Swiper(".soon__swiper2", {
+  const swiperSoon2 = new Swiper(".soon__swiper2", {
     spaceBetween: 10,
     loop: true,
     thumbs: {
@@ -180,6 +212,63 @@ $(document).ready(function () {
     
   });
 
+  const swiper5 = new Swiper(".wait_swiper", {
+    slidesPerView: 1,
+    spaceBetween: 10,
+    pagination: {
+      el: ".swiper-pagination",
+    },
+    speed: 1000,
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: false,
+    },
+    loop: true,
+    // watchSlidesProgress: true,
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    breakpoints: {
+      640: {
+        slidesPerView: 2,
+        spaceBetween: 20,
+      },
+      768: {
+        slidesPerView: 3,
+        spaceBetween: 40,
+      },
+      1024: {
+        slidesPerView: 2,
+        spaceBetween: 40,
+      },
+      1280: {
+        slidesPerView: 2.5,
+        spaceBetween: 40,
+      },
+    },
+  });
+
+  const swiper6 = new Swiper('.slider__thumbs .swiper', {
+    direction: 'vertical',
+    slidesPerView: 3, 
+    spaceBetween: 24, 
+    navigation: { 
+      nextEl: '.slider__next', 
+      prevEl: '.slider__prev' 
+    },
+    loop: true,
+    freeMode: true, 
+    breakpoints: { 
+      0: { 
+        direction: 'horizontal', 
+      },
+      768: { 
+        direction: 'vertical', 
+      }
+    }
+  });
+
   //menu
   $(".menu__btn_open").on("click", function () {
     $("body").toggleClass("hidden");
@@ -188,7 +277,7 @@ $(document).ready(function () {
   });
 
   //modal-form
-  $(".popup_form").hide();
+  // $(".popup_form").hide();
   // $(".contact__button, .header__button_mob").on("click", function () {
   //   $(".popup_form").show();
   // });
