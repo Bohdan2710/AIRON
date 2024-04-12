@@ -1,0 +1,225 @@
+.study{
+  &.wrapper{
+    .main__container{
+      @include _1024{
+        padding: 14.2rem 10rem 10.2rem;
+      }
+    }
+    .about__body{
+      width: 100%;
+    }
+  }
+  .form_sectio2 .main__wrap{
+    width: 60%;
+  }
+  .about__text{
+    font-size: 1.6rem;
+    line-height: 2.2rem;
+    span{
+      font-size: 2rem;
+      line-height: 2.4rem;
+    }
+  }
+  .about__title{
+    span{
+      display: inline;
+    }
+  }
+  .main__title{
+    margin: 0 0 2.5rem;
+    @include _1024{
+      margin: 0 0 3rem;
+    }
+    br{
+      display: none;
+      @include _1024{
+        display: block;
+      }
+    }
+    max-width: 100%;
+  }
+  .main__flex{
+    @include _1024{
+      display: flex;
+    }
+  }
+  .main__span{
+    font-family: $montserrat-bold;
+    max-width: 42.5rem;
+    margin: 0 0 3rem;
+    @include _1024{
+      margin: 0;
+    }
+  }
+  .main__wrap{
+    width: 100%;
+    @include _1024{
+      margin: 0 3rem 0 0;
+    }
+  }
+  &__text{
+    font-size: 1.6rem;
+    line-height: 2.2rem;
+    @include _1024{
+      font-size: 1.8rem;
+    }
+  }
+  .steps__title{
+    border: none;
+    padding: 0;
+    margin: 0 0 3rem;
+    @include _1024{
+      margin: 0 0 3rem;
+    }
+  }
+  .block_stesps__bottom{
+    &.border{
+      border-top: none !important;
+      border-left: none !important;
+      border-right: none !important;
+      border-bottom:.1rem solid $grey-color !important;
+      padding: 0 0 .9rem;
+    }
+    flex-direction: row;
+    align-items: center;
+    margin: 0 0 1.5rem;
+  }
+  
+  .block_steps{
+    background-color: #fff;
+    padding: 1.9rem 2.8rem 3.6rem 3rem;
+    ul{
+      padding: 0;
+      margin: 0;
+      span{
+        font-size: 1.6rem;
+        line-height: 2.2rem;
+        font-family: $montserrat-bold;
+        display: inline-block;
+        margin: 0 0 1rem;
+        @include _1024{
+          margin: 1rem 0 2rem;
+          font-size: 2rem;
+          line-height: 2.4rem;
+        }
+      }
+      li{
+        display: flex;
+        margin: 0 0 .7rem;
+        font-size: 1.6rem;
+        line-height: 2.2rem;
+        @include _1024{
+          margin: 0 0 1rem;
+          font-size: 1.8rem;
+          line-height: 2.2rem;
+        }
+        &::before{
+          content: '';
+          flex: 0 0 auto;
+          border-radius: 50%;
+          display: block;
+          width: .7rem;
+          height: .7rem;
+          background-color: $green-color;
+          margin: .7rem .8rem 0 0;
+          @include _1024{
+            width: 1rem;
+            height: 1rem;
+          }
+        }
+      }
+    }
+  }
+  .block_stesps__count{
+    padding: 0;
+    border: none;
+    margin: 0;
+  }
+  .steps .block_steps::after{
+    display: none;
+  }
+  .form_main{
+    @include _1024{
+      width: 50%;
+    }
+    form{
+      max-width: 45rem;
+    }
+  }
+  &.about .info__blocks{
+    position: static;
+    transform: translate(0);
+    @include _1024{
+      padding: 0 6.2rem 6rem 6rem;
+    }
+  }
+  .info__container{
+    padding-bottom: 0;
+  }
+  .info__back{
+    display: none;
+    @include _768{
+      height: 58.1rem;
+      display: block;
+    }
+  }
+
+  .block_steps {
+    max-width: 100%;
+    padding: 2.5rem 1rem 2.8rem 2.5rem;
+    width: 100%;
+    @include _768{
+      width: calc((100% - 2rem) / 2);
+    }
+    @include _1024{
+      padding: 3.6rem 8rem 3.7rem 5rem;
+    }
+  }
+
+  .study_block_steps{
+    padding: 0 0 .9rem;
+    background-color: #fff;
+    padding: 0 2rem 1.8rem 2rem;
+    position: relative;
+    background: #fff;
+    padding: 1.9rem 3rem 3.6rem;
+    border: none;
+    @include _768{
+      width: calc((100% - 2rem) / 2);
+    }
+    @include _768{
+      width: calc((100% - 3rem) / 3);
+    }
+    @include _1440{
+      width: calc((100% - 4rem) / 4);
+      max-width: 30.5rem;
+    }
+    &:last-child{
+      margin: 0 0 3rem;
+      @include _768{
+        margin: 0;
+      }
+    }
+    &::after{
+      display: none;
+    }
+    .block_stesps__bottom{
+      padding: 0 0 .9rem;
+      border-bottom: .1rem solid;
+    }
+  }
+}
+
+.cards_study{
+  .block_stesps__text{
+    text-transform: uppercase;
+    font-size: 2.5rem;
+    @include _1024{
+      font-size: 3.5rem;
+      line-height: 4.2rem;
+    }
+  }
+ .block_stesps__bottom{
+  margin: 0 0 2.5rem;
+ }
+}

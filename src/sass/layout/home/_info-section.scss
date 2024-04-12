@@ -87,17 +87,17 @@
     left: 0;
     width: 100%;
     z-index: -1;
-    max-height: 45rem;
+    height: 45rem;
 
     .desk {
       display: none;
-      @include _600{
+      @include _968{
         display: block;
       }
     }
     .mob {
       display: block;
-      @include _600{
+      @include _968{
         display: none;
       }
     }

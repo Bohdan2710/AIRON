@@ -1,0 +1,115 @@
+.form_sectio2 {
+  padding: 5rem 0;
+  @include _1024{
+    padding: 9rem 0;
+  }
+  form{
+    @include _768{
+      width: 100%;
+      max-width: 100%;
+    }
+    @include _968{
+      width: 40%;
+      max-width: 45rem;
+      margin: 0;
+    }
+  }
+  &__submit{
+    margin: 0;
+  }
+  &__span,
+  &__title {
+    text-transform: none;
+    font-size: 2rem;
+    line-height: 2.4rem;
+    margin: 0;
+    color: $white-color;
+    font-family: $montserrat-bold;
+  }
+  &__span{
+    margin: 0 0 2rem;
+    @include _968{
+      margin: 0 0 2.5rem;
+    }
+  }
+  &__title{
+    @include _968{
+      font-size: 3.5rem;
+      font-family: $montserrat-regular;
+      text-transform: uppercase;
+      margin: 0 0 1.5rem;
+    }
+  }
+  .form__wrap {
+    background: linear-gradient(257.52deg, rgba(0, 0, 0, 0.3) 6.55%, rgba(0, 0, 0, 0) 59.06%, rgba(0, 0, 0, 0) 59.06%);
+    padding: 2rem 2rem 5rem;
+    @include _768{
+      flex-direction: column;
+    }
+    @include _968{
+      flex-direction: row;
+    }
+    @include _1280{
+      padding: 5rem 7.1rem 5.7rem 8rem;
+    }
+  }
+  .main {
+    &__wrap{
+      @include _968{
+        flex: 0 0 auto;
+        width: 60%;
+        display: flex;
+        flex-direction: column;
+      }
+    }
+    &__text {
+      font-size: 2rem;
+      text-transform: none;
+      line-height: 2.4rem;
+      margin: 0;
+    }
+    &__title {
+      flex: 1 1 auto;
+      background: inherit;
+      -webkit-background-clip: inherit;
+      -webkit-text-fill-color: inherit;
+      text-transform: none;
+      font-size: 4rem;
+      line-height: 4.8rem;
+      margin: 0 0 2rem;
+      color: $white-color;
+      @include _968{
+        font-size: 8rem;
+        line-height: 9.7rem;
+      }
+    }
+  }
+  .block_swiper2__day, 
+  .block_swiper2__month{
+    &:last-child{
+      margin: 0;
+    }
+    @include _968{
+      margin: 0 2rem 0 0;
+    }
+    @include _1280{
+      margin: 0 2.7rem 0 0;
+    }
+  }
+  .block_swiper2__wrap {
+    width: 100%;
+    padding: 3rem 4rem 4rem 4rem;
+    margin: 0 0 3rem;
+    @include _968{
+      margin: 0;
+      padding: 2rem;
+      width: fit-content;
+    }
+    @include _1024{
+      background: rgba(255, 255, 255, 0.3);
+    }
+    @include _1280{
+      padding: 2rem 5.1rem 2.5rem 2.8rem;
+    }
+  }
+}

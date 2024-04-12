@@ -1,0 +1,35 @@
+.yachting{
+  .transport{
+    &__head{
+      flex-direction: row;
+      align-items: flex-start;
+      margin: 0 0 3rem;
+    }
+    &__title{
+      margin: 0 2.4rem 0 0;
+      border: none;
+      padding: 0;
+    }
+    .info__icon{
+      align-self: flex-start;
+    }
+    &__text{
+      margin: 0 0 4.8rem;
+    }
+    .block__title{
+      color: $grey-color;
+      text-transform: none;
+    }
+    .block__text{
+      font-size: 1.6rem;
+      line-height: 2.2rem;
+      @include _1024{
+        font-size: 1.8rem;
+      }
+    }
+
+    &__block:nth-child(3){
+      padding: 0;
+    }
+  }
+}

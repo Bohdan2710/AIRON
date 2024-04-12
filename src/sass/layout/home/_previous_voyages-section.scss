@@ -40,19 +40,21 @@
       margin: 0 1rem 0 0;
     }
   }
-}
-.swiper-slide{
-  width: 25rem;
-  height: 26rem;
-  @include _480{
-    width: 35rem;
-    height: 30rem;
+
+  .swiper-slide{
+    width: 25rem;
+    height: 26rem;
+    @include _480{
+      width: 35rem;
+      height: 30rem;
+    }
+    @include _768{
+      width: 50rem;
+      height: 33rem;
+    }
   }
-  @include _768{
-    width: 50rem;
-    height: 33rem;
-  }
 }
+
 .previous_voyages_swiper{
   overflow: visible;
 }

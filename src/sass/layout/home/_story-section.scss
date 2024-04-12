@@ -42,31 +42,6 @@
     }
   }
 
-  .swiper-pagination{
-    position: static;
-  }
-  .swiper-pagination-bullet{
-    background: rgba(79, 79, 79, 1);
-    opacity: 1;
-    width: 1rem;
-    height: 1rem;
-    position: relative;
-    margin: 0 1rem 0 0;
-  }
-  .swiper-pagination-bullet-active{
-    background: rgba(79, 79, 79, 1);
-    &::after{
-      content: '';
-      width: 1.5rem;
-      height: 1.5rem;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      border: 1px solid rgba(79, 79, 79, 1);
-      border-radius: 50%;
-    }
-  }
   &__buttons{
     .swiper-button-prev,
     .swiper-button-next{
@@ -95,5 +70,40 @@
     @include _1024{
       margin: 0 0 3rem;
     }
+  }
+
+  .swiper-pagination-bullet{
+    background: rgba(79, 79, 79, 1);
+  }
+  .swiper-pagination-bullet-active{
+    background: rgba(79, 79, 79, 1);
+    &::after{
+      border: 1px solid rgba(79, 79, 79, 1);
+    }
+  }
+}
+
+.swiper-pagination{
+  position: static;
+}
+.swiper-pagination-bullet{
+  opacity: 1;
+  width: 1rem;
+  height: 1rem;
+  position: relative;
+  margin: 0 1rem 0 0;
+}
+
+.swiper-pagination-bullet-active{
+  &::after{
+    content: '';
+    width: 1.5rem;
+    height: 1.5rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 1px solid rgba(79, 79, 79, 1);
+    border-radius: 50%;
   }
 }

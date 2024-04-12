@@ -1,0 +1,56 @@
+.yachting{
+  .soon2{
+    .story__title{
+      display: block;
+    }
+    .swiper-slide{
+      min-height: 34rem;
+      height: 34rem;
+      margin: 0 0 3rem;
+      @include _1024{
+        margin: 0 0 5rem;
+      }
+
+      .soon__block{
+        height: 100%;
+        width: 100%;
+        padding: 2rem;
+
+        .block__month{
+          width: fit-content;
+          max-width: 100%;
+          padding: 1rem;
+          margin: 0 0 1rem;
+        }
+      }
+    }
+    .slider_buttons_wrap{
+      .button_without_back{
+        padding: .9rem 0;
+        max-width: 18rem;
+        margin-left: auto;
+        @include _1024{
+          border: 1px solid rgba(0, 151, 160, 1);
+          color: $green-color;
+          margin: 0 auto;
+          max-width: 25rem;
+          padding: 1.4rem 0;
+        }
+      }
+    }
+
+  }
+
+  .faq{
+    padding: 5rem 0;
+    @include _1024{
+      padding: 8.7rem 0 9rem;
+    }
+  }
+
+  .swiper-slide{
+    .block__month span{
+      font-size: 1.4rem;
+    }
+  }
+}

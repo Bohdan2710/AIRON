@@ -8,15 +8,48 @@
 @import "./layout/pop-up-form";
 @import "./layout/header";
 @import "./layout/footer";
+@import "./layout/faq";
 
-@import "./layout/home/home_main";
-@import "./layout/home/info_section";
-@import "./layout/home/steps_section";
+//home
+@import "./layout/home/home-main";
+@import "./layout/home/info-section";
+@import "./layout/home/steps-section";
+@import "./layout/home/transform-section";
+@import "./layout/home/wait-section";
+@import "./layout/home/team-section";
 @import "./layout/home/soon-section";
 @import "./layout/home/live-section";
 @import "./layout/home/tarnsport-section";
 @import "./layout/home/about-section";
 @import "./layout/home/story-section";
 @import "./layout/home/form-section";
-@import "./layout/home/previous_voyages_section";
-@import "./layout/faq";
+@import "./layout/home/previous_voyages-section";
+//yachting
+@import "./layout/yachting/home-section";
+@import "./layout/yachting/section-2";
+@import "./layout/yachting/section-3";
+@import "./layout/yachting/section-4";
+@import "./layout/yachting/section-6";
+@import "./layout/yachting/section-7";
+@import "./layout/yachting/form_country";
+@import "./layout/yachting/soon2-section";
+//past-trip
+@import "./layout/past_trip/past_trip";
+//nearest_yachting
+@import "./layout/nearest_yachting/nearest_yachting";
+//contact-page
+@import "./layout/contact-page/contact-page";
+//teambuilding
+@import "./layout/teambuilding/teambuilding";
+//about
+@import "./layout/about/about";
+//study
+@import "./layout/study/study";
+//policy
+@import "./layout/policy/policy";
+//404
+@import "./layout/404/404";
+//certificates
+@import "./layout/certificates/certificates";
+//founder
+@import "./layout/founder/founder";

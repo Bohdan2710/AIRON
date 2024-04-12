@@ -1,0 +1,350 @@
+.certificates {
+  padding: 12rem 0 5rem;
+  @include _1024{
+    padding: 18rem 0 8rem;
+  }
+  &__title{
+    display: block;
+    padding: 0;
+    border: 0;
+    margin: 0 0 3rem;
+    &::after{
+      display: none;
+    }
+  }
+
+  &__block_wrap{
+    overflow: hidden;
+    border-radius: 2rem;
+    padding: 2rem 2.5rem 1.8rem 2.5rem;
+    position: relative;
+    margin: 0 0 2rem;
+    @include _1024{
+      margin: 0 0 4rem;
+      padding: 4rem 4rem 4.6rem;
+    }
+    &.back_green{
+      background: rgba(27, 153, 139, 1);
+    }
+    &.back_dark_green{
+      background: rgba(10, 46, 54, 1);
+    }
+
+  }
+
+  &__block {
+    max-width: 50rem;
+    position: relative;
+    margin: 0 0 4rem;
+    @include _1024{
+      margin: 0;
+    }
+    &:last-child{
+      margin: 0;
+    }
+    
+    .back_decor{
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: 12rem;
+      height: 11.5rem;
+      z-index: 2;
+      @include _1024{
+        width: 24rem;
+        height: 20.5rem;
+      }
+    }
+    .button_without_back{
+      max-width: 25rem;
+    }
+  }
+
+  &__blocks1 {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 2rem;
+    row-gap: 3rem;
+    @include _1440{
+      column-gap: 5rem;
+    }
+    margin: 0 0 10rem;
+    .block {
+      &__head {
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+        margin: 0 0 1.5rem;
+        @include _1024{
+          margin: 0 0 2rem;
+        }
+        img{
+          width: 5rem;
+          height: 5.1rem;
+          @include _1024{
+            width: 5.7rem;
+            height: 6rem;
+          }
+        }
+      }
+    
+      &__title {
+        margin: 0;
+        text-transform: uppercase;
+        font-family: $montserrat-semibold;
+        width: 75%;
+        @include _1024{
+          font-size: 3rem;
+          line-height: 3.8rem;
+        }
+      }
+    
+      &__body {
+        position: relative;
+        .block__month span{
+          color: $grey-color;
+          font-size: 1.8rem;
+          line-height: 2.2rem;
+          font-family: $montserrat-semibold;
+        }
+        .block_swiper2 {
+          &__wrap {
+            padding: 1.2rem 1.7rem 1.5rem 2.5rem;
+            flex-direction: row;
+            border-radius: 1rem;
+            background: linear-gradient(93.19deg, #FAFAFA 0.45%, rgba(255, 255, 255, 0.8) 99.55%);
+            border: 1px solid;
+            border-image-source: linear-gradient(93.95deg, #AEAEAE 0%, #FFFFFF 97.57%);
+            margin: 0 0 1rem;
+            @include _1024{
+              margin: 0 0 2rem;
+            }
+          }
+        
+          &__text {
+            color: $grey-color;
+            font-size: 1.2rem;
+            line-height: 1.7rem;
+            font-family: $montserrat-regular;
+          }
+          &__month,
+          &__day {
+            margin: 0 1.4rem 0 0;
+            &:last-child{
+              margin: 0;
+            }
+          }
+        }
+      }
+      &__text {
+        font-size: 1.8rem;
+        @include _1024{
+          font-size: 2.2rem;
+          line-height: 2.5rem;
+        }
+      }
+    }
+  }
+
+  &__blocks2 {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 2rem;
+    row-gap: 3rem;
+    .button_without_back{
+      max-width: 25rem;
+      margin: 0 0 4rem;
+      @include _1024{
+        margin: 0;
+      }
+    }
+
+    .back_decor{
+      width: 11rem;
+      height: 8rem;
+      &.desk{
+        display: none;
+        @include _1024{
+          display: block;
+        }
+      }
+      &.mob{
+        @include _1024{
+          display: none;
+        }
+      }
+      @include _1024{
+        top: 0;
+        right: 0;
+        height: 10rem;
+      }
+    }
+    .certificates__block_wrap{
+      overflow: visible;
+      padding: 0;
+      @include _1024{
+        margin: 0;
+      }
+    }
+    .certificates__block{
+      overflow: hidden;
+      border-radius: 3rem;
+      position: relative;
+      margin: 0 0 2rem;
+      position: relative;
+      padding: 2.5rem 0 2.9rem;
+      max-width: 42.4rem;
+      @include _1024{
+        margin: 0 0 4rem;
+        padding: 4rem 0 4.4rem;
+      }
+      .img_back_logo{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 14.4rem;
+        max-height: 17.4rem;
+      }
+      &.back_brown{
+        background: rgba(10, 9, 8, 1);
+      }
+      &.back_blue{
+        background: rgba(31, 86, 115, 1);
+      }
+      &.back_light_green{
+        background: rgba(56, 134, 89, 1);
+      }
+    }
+    .block {
+
+      &__head {
+        padding: 0 .9rem;
+        text-align: center;
+        color: $white-color;
+        @include _1024{
+          padding: 0 3.1rem 0 2.6rem;
+        }
+      }
+    
+      &__title {
+        font-size: 2rem;
+        line-height: 2.6rem;
+        margin: 0 0 2rem;
+        text-transform: uppercase;
+        @include _1024{
+          font-size: 2.5rem;
+          line-height: 3.2rem;
+          margin: 0 0 2.3rem;
+        }
+      }
+    
+      &__body {
+        padding: 0.9rem 0;
+        text-align: center;
+        background-color: $white-color;
+      }
+    
+      &__text {
+        color: $grey-color;
+        font-size: 1.6rem;
+        line-height: 2.2rem;
+        font-family: $montserrat-regular;
+        @include _1024{
+          font-size: 1.8rem;
+        }
+      }
+    
+      &__sub {
+        display: block;
+        margin: 0 0 .5rem;
+        font-size: 1.6rem;
+        line-height: 3rem;
+        text-transform: uppercase;
+        @include _1024{
+          font-size: 1.8rem;
+          margin: 0 0 1rem;
+        }
+      }
+    }
+  }
+}
+.certificates_wrap{
+  .form_sectio2{
+    padding: 5rem 0 8rem;
+    @include _1024{
+      padding: 8rem 0 11rem;
+    }
+  }
+  .form_sectio2 .form__wrap{
+    border-radius: 3rem;
+    background: rgba(32, 6, 59, 1);
+    padding: 3rem 2rem 4rem;
+    @include _768{
+      flex-direction: row;
+    }
+    @include _1024{
+      padding: 6rem 10rem 6rem 6rem;
+    }
+  }
+  .main__wrap{
+    @include _768{
+      display: flex;
+      flex-direction: column;
+    }
+
+  }
+  .main__text{
+    text-transform: uppercase;
+    font-size: 2rem;
+    line-height: 2.6rem;
+    margin: 0 0 1.7rem;
+    font-family: $montserrat-bold;
+    max-width: 100%;
+    @include _768{
+      flex: 1 1 auto;
+    }
+    @include _1024{
+      font-size: 3rem;
+      line-height: 3.2rem;
+    }
+  }
+  .form__span{
+    font-size: 1.6rem;
+    line-height: 2.2rem;
+    margin: 0 0 3rem;
+    text-transform: none;
+    max-width: 48.4rem;
+    @include _768{
+      margin: 0;
+    }
+    @include _1024{
+      font-size: 1.8rem;
+      line-height: 2.2rem;
+      font-family: $montserrat-regular;
+    }
+  }
+  .form__back{
+    top: 3.5rem;
+    left: 50%;
+    transform: translate(-50%);
+    width: 21rem;
+    max-height: 19.6rem;
+    z-index: 0;
+    @include _1024{
+      top: 50%;
+      transform: translate(-50%, -50%);
+      width: 27rem;
+      max-height: 26.5rem;
+    }
+  }
+}
+.block{
+  &__text{
+    color: $white-color;
+    text-transform: uppercase;
+    font-size: 1.8rem;
+    line-height: 2.5rem;
+    font-family: $montserrat-bold;
+  }
+}

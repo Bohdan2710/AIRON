@@ -10,7 +10,7 @@
     }
   }
 
-  &__dody {
+  &__body {
     @include _1024{
       width: 45%;
     }
@@ -61,12 +61,15 @@
     padding: 0;
     border: none;
     margin: 0 0 2rem;
+    @include _1024{
+      margin: 0 0 2.6rem;
+    }
     &::after{
       max-width: 16.9rem;
       margin: 0 0 2.1rem .5rem;
     }
-    @include _1024{
-      margin: 0 0 2.6rem;
+    span{
+      flex: 1 1 auto;
     }
     &.desk{
       display: none;

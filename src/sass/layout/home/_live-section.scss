@@ -6,6 +6,7 @@
   &_swiper {
     max-width: 61.6rem;
     height: fit-content;
+    margin-right: 0;
     @include _768{
       width: 50%;
     }
@@ -13,7 +14,7 @@
 
   &__content{
     @include _768{
-      width: 50%;
+      width: 47%;
       margin: 0 3rem 0 0;
     }
   }

@@ -1,0 +1,156 @@
+.about.wrapper{
+  padding: 0;
+  .info__blocks{
+    @include _1440{
+      max-width: 151.9rem;
+      flex-wrap: nowrap;
+      position: absolute;
+      left: 50%;
+      bottom: 0;
+      width: 100%;
+      transform: translate(-50%, 40%);
+      justify-content: center;
+    }
+  }
+  .main{
+    &__container{
+      @include _1024{
+        padding: 18.1rem 10rem 20.9rem;
+      }
+    }
+    &__title{
+      margin: 0 0 3rem;
+    }
+  }
+  
+  .blocks_info__total::after{
+    width: 8rem;
+    
+    @include _1024{
+      width: 14rem;
+    }
+  }
+  .info__block {
+    width: calc(calc(100% - 3rem)/2);
+    border-radius: .5rem;
+    padding: 2rem;
+    &:last-child{
+      width: 100%;
+      .blocks_info__total::after{
+        width: 20rem;
+      }
+    }
+
+    @include _1440{
+      max-width: 24.6rem;
+      width: 100%;
+    }
+  }
+  .blocks_info__text{
+    font-size: 1.4rem;
+    line-height: 1.7rem;
+  }
+  .form_sectio2 .form__wrap{
+    background: linear-gradient(95.34deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0) 100%);
+  }
+  .form__span{
+    margin: 0;
+    max-width: 38.7rem;
+    font-family: $montserrat-regular;
+    font-size: 1.8rem;
+  }
+  .about{
+    &__quote{
+      background: rgba(242, 242, 242, 1);
+      padding: 3.5rem 3.2rem 3.5rem 3.5rem;
+      position: relative;
+      @include _1024{
+        padding: 4rem 3.4rem 4.4rem 5rem;
+      }
+      p{
+        margin: 0;
+      }
+      svg{
+        position: absolute;
+        width: 5rem;
+        height: 3.5rem;
+        @include _1024{
+          width: 6.6rem;
+          height: 5rem;
+        }
+        &:first-child{
+          top: -1rem;
+          left: -1rem;
+          @include _1024{
+            top: 2rem;
+            left: -4rem;
+          }
+        }
+        &:last-child{
+          bottom: -1rem;
+          right: 2rem;
+          transform: rotate(-180deg);
+          @include _1024{
+            bottom: 2rem;
+            right: 3rem;
+          }
+        }
+      }
+    }
+    &__title{
+      display: block;
+      padding: 0;
+      border: none;
+      @include _1024{
+        margin: 0 0 2rem;
+      }
+      &::after{
+        display: none;
+      }
+    }
+    &__text{
+      font-size: 1.4rem;
+      line-height: 1.7rem;
+      line-height: 1.9rem;
+      margin: 0 0 3rem;
+      @include _1024{
+        font-size: 1.8rem;
+        line-height: 2.2rem;
+        margin: 0 0 4.1rem;
+      }
+      span{
+        font-family: $montserrat-bold;
+      }
+    }
+    &__wrap{
+      justify-content: space-between;
+    }
+    &__body{
+      width: 46%;
+    }
+    &__img{
+      .img-fluid{
+        height: 100%;
+      }
+      margin: 0 0 5rem;
+      @include _768{
+        width: 100%;
+      }
+      @include _1024{
+        width: 50%;
+        margin: 0 2rem 0 0;
+      }
+      &.desk{
+        display: none;
+        @include _1024{
+          display: block;
+        }
+      }
+      &.mob{
+        @include _1024{
+          display: none;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,103 @@
+.team {
+  padding: 5rem 0;
+  @include _1024{
+    padding: 12rem 0 8.5rem;
+  }
+  &__cotent {
+    @include _768{
+      width: 50%;
+      max-width: 47rem;
+    }
+  }
+
+  &__wrap{
+    position: relative;
+  }
+
+  &__title {
+    margin: 0 0 3rem;
+    position: relative;
+    @include _768{
+      margin: 0 0 4rem;
+    }
+    @include _1024{
+      &::after{
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: -102%;
+      }
+    }
+  }
+
+  &__button_video{
+    width: 10rem;
+    height: 10rem;
+    padding: 1.6rem;
+    @include _768{
+      width: 12rem;
+      height: 12rem;
+      padding: 2rem;
+    }
+    .back_red{
+      width: 6.6rem;
+      height: 6.6rem;
+      @include _768{
+        width: 8rem;
+        height: 8rem;
+      }
+      svg{
+        height: 2.7rem;
+        width: 2.1rem;
+        @include _768{
+          width: 3.3rem;
+          height: 2.5rem;
+        }
+      }
+    }
+  }
+
+  &__text {
+    margin: 0 0 4rem;
+    font-size: 1.6rem;
+    line-height: 1.9rem;
+    @include _768{
+      margin: 0 0 8.3rem;
+      font-size: 1.8rem;
+      line-height: 2.2rem;
+    }
+  }
+
+  &__img {
+    position: relative;
+    margin: 0 0 3rem;
+    @include _768{
+      width: 45%;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      margin: 0;
+    }
+    @include _1024{
+      width: 50%;
+      max-width: 61.6rem;
+    }
+    button{
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+    img{
+      max-height: 40rem;
+    }
+  }
+
+  &__button {
+    max-width: 100%;
+    @include _768{
+      max-width: 30rem;
+
+    }
+  }
+}

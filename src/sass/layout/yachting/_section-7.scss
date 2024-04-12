@@ -1,0 +1,46 @@
+.yachting{
+  .live{
+    &_swiper{
+      margin-right: auto;
+      @include _768{
+        margin-right: 0;
+      }
+    }
+    .swiper-slide{
+      height: 20rem;
+      max-height: 20rem;
+      @include _600{
+        height: 35rem;
+        max-height: 35rem;
+      }
+      @include _1024{
+        height: 47.2rem;
+        max-height: 47.2rem;
+      }
+    }
+    &__blocks{
+      margin: 0 0 2rem;
+      @include _1024{
+        margin: 0 0 4rem;
+      }
+    }
+    .button_with_back{
+      &.mob{
+        margin-top: 2.7rem;
+        @include _768{
+          display: none;
+        }
+      }
+      &.desk{
+        display: none;
+        @include _768{
+          display: block;
+        }
+      }
+      margin: 0 0 3rem;
+      @include _1024{
+        margin: 0;
+      }
+    }
+  }
+}

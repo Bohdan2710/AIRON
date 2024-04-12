@@ -151,38 +151,36 @@
     }
   }
 
-  .block {
+}
+.block {
 
-    &__title {
-      display: block;
-      font-size: 2rem;
-      margin: 0 0 1rem;
-      line-height: 2.4rem;
+  &__title {
+    display: block;
+    font-size: 2rem;
+    margin: 0 0 1rem;
+    line-height: 2.4rem;
+    color: $white-color;
+  }
+
+  &__month {
+    display: flex;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 1rem 0 1rem 1rem;
+    margin: 0 0 1rem;
+    max-width: 16.5rem;
+    span{
+      font-size: 1.4rem;
       color: $white-color;
+      line-height: 1.7rem;
     }
-  
-    &__wrap {
-    }
-  
-    &__month {
-      display: flex;
-      align-items: center;
-      background: rgba(0, 0, 0, 0.5);
-      padding: 1rem 0 1rem 1rem;
-      margin: 0 0 1rem;
-      max-width: 16.5rem;
-      span{
-        font-size: 1.4rem;
-        color: $white-color;
-        line-height: 1.7rem;
-      }
-    }
-  
-    &__button {
-      border: .1rem solid $white-color;
-      color: $white-color;
-      max-width: 16.5rem;
-    }
+  }
+
+  &__button {
+    border: .1rem solid $white-color;
+    color: $white-color;
+    max-width: 16.5rem;
+    padding: 1.1rem 0;
   }
 }
 
@@ -230,6 +228,7 @@
       align-items: center;
       padding: 2rem 2rem 2rem 2.8rem;
       background: rgba(0, 0, 0, 0.4);
+      width: fit-content;
       .block__month{
         background-color: transparent;
         padding: 0;
@@ -246,6 +245,7 @@
       margin: 0 0 .5rem;
       font-size: 2rem;
       line-height: 2.4rem;
+      font-family: $montserrat-bold;
 		}
 
 		&__day {

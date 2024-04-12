@@ -1,0 +1,89 @@
+.contact{
+  .form_sectio2 .form__wrap{
+    padding: 3rem;
+    @include _1024{
+      padding: 4rem;
+    }
+    @include _1280{
+      padding: 6rem 10rem 7.1rem 10rem;
+    }
+  }
+  padding: 11rem 0 8rem;
+  @include _1024{
+    padding: 18rem 0 10rem;
+  }
+  .container{
+    padding: 0 2.5rem;
+    @include _1024{
+      padding: 0 10rem;
+    }
+  }
+  .form_sectio2 .main__text{
+    font-size: 3rem;
+    line-height: 3.6rem;
+    text-transform: uppercase;
+    margin: 0 0 1rem;
+    @include _1024{
+      font-size: 3.5rem;
+      line-height: 4.2rem;
+      margin: 0 0 2rem;
+    }
+  }
+  .main__span{
+    font-size: 1.6rem;
+    margin: 0 0 2rem;
+    color: $white-color;
+    @include _1024{
+      font-size: 1.8rem;
+    }
+  }
+  .main{
+    &__wrap{
+      color: $white-color;
+      a{
+        color: $white-color;
+      }
+    }
+  }
+  &__social{
+    display: flex;
+    align-items: center;
+    margin: 0 0 2rem;
+    @include _1024{
+      margin: 0;
+    }
+    a{
+      border: .1rem solid $white-color;
+      padding: 1rem;
+      margin: 0 1rem 0 0;
+      svg{
+        width: 2rem;
+        height: 2rem;
+        fill: $white-color;
+      }
+    }
+  }
+  &__wrap{
+    a{
+      display: block;
+      font-size: 2rem;
+      font-family: $montserrat-medium;
+      line-height: 2.4rem;
+      text-decoration: none;
+      margin: 0 0 1rem;
+      @include _1024{
+        margin: 0 0 1.5rem;
+      }
+      &:last-child{
+        margin: 0 0 2rem;
+        @include _1024{
+          margin: 0 0 3rem;
+        }
+      }
+    }
+  }
+  .footer__contact_footer{
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
